@@ -1,0 +1,41 @@
+def solution(N):
+    split_N = str(N)
+    if len(split_N) == 1:
+        sum_of_N_digits = int(split_N[0])
+        for i in range(N + 1, 10000):
+            split_i = str(i)
+            if len(split_i) == 2:
+                sum_of_i_digits = int(split_i[0]) + int(split_i[1])
+            elif len(split_i) == 3:
+                sum_of_i_digits = int(split_i[0]) + int(split_i[1]) + int(split_i[2])
+            else:
+                sum_of_i_digits = int(split_i[0]) + int(split_i[1]) + int(split_i[2]) + int(split_i[3])
+            if sum_of_i_digits == sum_of_N_digits * 2:
+                result = i
+                break
+            
+    elif len(split_N) == 2:
+        sum_of_N_digits = int(split_N[0]) + int(split_N[1])
+        for i in range(N + 1, 10000):
+            split_i = str(i)
+            if len(split_i) == 2:
+                sum_of_i_digits = int(split_i[0]) + int(split_i[1])
+            elif len(split_i) == 3:
+                sum_of_i_digits = int(split_i[0]) + int(split_i[1]) + int(split_i[2])
+            else:
+                sum_of_i_digits = int(split_i[0]) + int(split_i[1]) + int(split_i[2]) + int(split_i[3])
+            if sum_of_i_digits == sum_of_N_digits * 2:
+                result = i
+                break            
+    else:
+        sum_of_N_digits = int(split_N[0]) + int(split_N[1]) + int(split_N[2])
+        for i in range(N + 1, 10000):
+            split_i = str(i)
+            if len(split_i) == 3:
+                sum_of_i_digits = int(split_i[0]) + int(split_i[1]) + int(split_i[2])
+            else:
+                sum_of_i_digits = int(split_i[0]) + int(split_i[1]) + int(split_i[2]) + int(split_i[3])
+            if sum_of_i_digits == sum_of_N_digits * 2:
+                result = i
+                break
+    return result
