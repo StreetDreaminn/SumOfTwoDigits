@@ -39,3 +39,8 @@ def solution(N):
                 result = i
                 break
     return result
+
+#Examples below
+print(solution(14)) #Returns 19
+print(solution(10)) #Returns 11
+print(solution(99)) # Returns 9999
